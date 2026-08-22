@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Vazirmatn is loaded via a <link> in index.html; this just applies it
+   everywhere, matching the font coverage the component previously set
+   via an inline <style> tag inside the artifact sandbox. */
+* {
+  font-family: "Vazirmatn", Tahoma, Arial, sans-serif;
+}
+
+/* Used by product/card titles that clamp to two lines. */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
